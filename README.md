@@ -1,6 +1,6 @@
 # ER-Structure-Analysis
 
-This repository contains a lightweight pipeline to import ND2 movies, segment the endoplasmic reticulum (ER) based on luminal or membrane fluorescent markers, and export quantitative measurements and figures for the manuscript:
+This repository contains a lightweight pipeline to import ND2 movies, segment the endoplasmic reticulum (ER) based on luminal or membrane fluorescent markers, and export quantitative measurements for the manuscript:
 
 > **“Endoplasmic reticulum disruption stimulates nuclear membrane mechanotransduction.”**
 
@@ -29,7 +29,7 @@ This program processes **3D fluorescence microscopy** datasets of the ER and pro
 
 ![ER Analysis Workflow](/Pipeline%20Image/ER%20Anlaysis%20Pipeline.png)
 
-![Visualization of ER Segmentation](/Pipeline%20Image/Screen%20Recording%202025-08-11%20at%202.23.54 AM.gif)
+![Visualization of ER Segmentation](/Pipeline%20Image/Screen%20Recording%202025-08-11%20at%209.42.52%20AM.gif)
 
 ## 📂 Repository layout
 
