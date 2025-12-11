@@ -473,9 +473,9 @@ class cell_segment:
 
             # list all remaining tracks
 
-            axes[0].set_ylabel('Connected ER area change (norm.)', fontsize=14, fontweight='bold')
-            axes[1].set_ylabel('Connected ER perimeter change (norm.)', fontsize=14, fontweight='bold')
-            axes[2].set_ylabel('ER circularity change (norm.)', fontsize=14, fontweight='bold')
+            axes[0].set_ylabel('Connected ER area', fontsize=14, fontweight='bold')
+            axes[1].set_ylabel('Connected ER perimeter', fontsize=14, fontweight='bold')
+            axes[2].set_ylabel('ER circularity', fontsize=14, fontweight='bold')
             axes[2].set_xlabel('Time/Frame', fontsize=14, fontweight='bold')
             
             color = cm.tab20b(np.linspace(0, 1, 4))
@@ -510,9 +510,9 @@ class cell_segment:
 
             color = cm.tab20b(np.linspace(0, 1, 4))
 
-            axes[0].set_ylabel('Connected ER area change (norm.)', fontsize=14, fontweight='bold')
-            axes[1].set_ylabel('Connected ER perimeter change (norm.)', fontsize=14, fontweight='bold')
-            axes[2].set_ylabel('ER circularity change (norm.)', fontsize=14, fontweight='bold')
+            axes[0].set_ylabel('Connected ER area', fontsize=14, fontweight='bold')
+            axes[1].set_ylabel('Connected ER perimeter', fontsize=14, fontweight='bold')
+            axes[2].set_ylabel('ER circularity', fontsize=14, fontweight='bold')
             axes[2].set_xlabel('Time/Frame', fontsize=14, fontweight='bold')
             
             axes[0].plot(self.frame_list, self.norm_area_list, color=color[0], marker='o')
@@ -522,7 +522,8 @@ class cell_segment:
             axes[0].tick_params(axis='y', labelsize=15)
             axes[1].tick_params(axis='y', labelsize=15)
             axes[2].tick_params(axis='both', labelsize=15)
-
+            
+            #plt.show()
             fig_save_name = '{File_Name}_analysis plot.png'.format(File_Name=self.directory)
             plt.savefig(fig_save_name, dpi=100)
 

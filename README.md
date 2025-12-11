@@ -2,15 +2,16 @@
 
 This repository contains a lightweight pipeline to import ND2 movies, segment the endoplasmic reticulum (ER) based on luminal or membrane fluorescent markers, and export quantitative measurements for the manuscript:
 
-> **“Endoplasmic reticulum disruption stimulates nuclear membrane mechanotransduction.”**
+ **Endoplasmic reticulum disruption stimulates nuclear membrane mechanotransduction.**
 
+**DOI: https://www.nature.com/articles/s41556-025-01820-9**
 ---
 
 ## 📌 Overview
 
 This program processes **3D fluorescence microscopy** datasets of the ER and produces:
 
-- Consistent ER segmentation masks (per frame / per z‑slice)
+- Consistent ER segmentation masks (per frame)
 - Morphology metrics (e.g., **ER perimeter, area, and circularity per FOV**) over time and within regions of interest
 - Optional segmentation‑overlay images/movies embedded in Napari Viewer to visualize segmentation quality
 
@@ -27,8 +28,11 @@ This program processes **3D fluorescence microscopy** datasets of the ER and pro
 
 ## Visualization of Analysis Workflow and Segmentation Result
 
+ ### ER Segmentation Workflow ###
 ![ER Analysis Workflow](/Pipeline%20Image/ER%20Anlaysis%20Pipeline.png)
 
+
+ ### Sample Movies of ER Segmentation Masks Overlay
 ![Visualization of ER Segmentation](/Pipeline%20Image/Screen%20Recording%202025-08-11%20at%209.42.52%20AM.gif)
 
 ## 📂 Repository layout
@@ -47,7 +51,7 @@ This program processes **3D fluorescence microscopy** datasets of the ER and pro
 
 ## ⚙ Installation
 
-Use **micromamba** (recommended) or **conda**.
+Use **micromamba** (recommended) or **conda**. We have provided an environmenmt.yaml file that contains all the packages (with specific versions) for the analysis pipeline.
 
 ```bash
 # Micromamba
@@ -86,7 +90,7 @@ conda activate er_analysis
 ## 📤 Outputs
 
 - **HDF5 (segmentation)**: labeled ER masks and/or processed stacks
-- **CSV (metrics)**: per‑frame metrics (e.g., median ER area, perimeter, and circularity per FOV over time)
+- **CSV (metrics)**: per‑frame metrics (e.g., normalized ER area, perimeter, and circularity per FOV over time)
 - **Quick plot (**``**)**: summary plot generated from the CSV metrics
 
 ---
@@ -99,11 +103,30 @@ conda activate er_analysis
 
 ---
 
+## Demo and Walkthrough
+
+- ### We have provided the demo data and screenshots of the key steps to demonstrate the analysis workflow.
+  - The demo data is stored in the **Demo** directory. It is cropped from the original timelapse movies and only contains 5 timepoints.
+
+- ### Below are the walkthrough of this analysis program.
+   
+   - **Step 1: Run ER_Analysis_Program.py**
+  ![Step1](/Demo%20Step/Step1.png)
+    
+   - **Step 2 – Choose segmentation method. Select the appropriate segmentation method based on how the ER is labeled (e.g., EGFP-KDEL vs. Sec61B), the microscope used to acquire the images, and whether the user wants to analyze the full movie or only a subset of frames.**
+  ![Step 2](/Demo%20Step/Step2.png)
+
+   - **Step 3: Program is running**
+  ![Step 3](/Demo%20Step/Step3.png)
+
+   - **Step 4: Use Napari viewer to visualize all intermediate steps and generate quantitative plots before saving in the directory**
+  ![Step 4](/Demo%20Step/Step4.png)
+
+
 ## ❓ Troubleshooting
 
-- **ND2 import errors** → ensure the ND2 reader dependency in `environment.yaml` is installed and working.
-- **Large movies** → downsample/crop for a quick test; process in tiles/batches if supported.
-- Please send questions to Zhouyang Shen: joeshenz123@gmail.com
+- If you have any questions, feel free to email joeshenz123@gmail.com
+
 
 
 
