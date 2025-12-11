@@ -3,9 +3,8 @@
 This repository contains a lightweight pipeline to import ND2 movies, segment the endoplasmic reticulum (ER) based on luminal or membrane fluorescent markers, and export quantitative measurements for the manuscript:
 
  **Endoplasmic reticulum disruption stimulates nuclear membrane mechanotransduction.**
+<BR>**DOI: https://www.nature.com/articles/s41556-025-01820-9**
 
-**DOI: https://www.nature.com/articles/s41556-025-01820-9**
----
 
 ## 📌 Overview
 
@@ -29,11 +28,11 @@ This program processes **3D fluorescence microscopy** datasets of the ER and pro
 ## Visualization of Analysis Workflow and Segmentation Result
 
  ### ER Segmentation Workflow ###
-![ER Analysis Workflow](/Pipeline%20Image/ER%20Anlaysis%20Pipeline.png)
+![ER Analysis Workflow](Pipeline%20Image/ER%20Anlaysis%20Pipeline.png)
 
 
  ### Sample Movies of ER Segmentation Masks Overlay
-![Visualization of ER Segmentation](/Pipeline%20Image/Screen%20Recording%202025-08-11%20at%209.42.52%20AM.gif)
+![Visualization of ER Segmentation](Pipeline%20Image/Screen%20Recording%202025-08-11%20at%209.42.52%20AM.gif)
 
 ## 📂 Repository layout
 
@@ -115,16 +114,16 @@ The scripts were tested with Python 3.11 on Mac OS Sequoia Version 15.4.1
 - ### Below are the walkthrough of this analysis program.
    
    - **Step 1: Run ER_Analysis_Program.py**
-  ![Step1](/Demo%20Step/Step1.png)
+  ![Step1](Demo%20Step/Step1.png)
     
    - **Step 2 – Choose segmentation method. Select the appropriate segmentation method based on how the ER is labeled (e.g., EGFP-KDEL vs. Sec61B), the microscope used to acquire the images, and whether the user wants to analyze the full movie or only a subset of frames.**
-  ![Step 2](/Demo%20Step/Step2.png)
+  ![Step 2](Demo%20Step/Step2.png)
 
    - **Step 3: Program is running**
-  ![Step 3](/Demo%20Step/Step3.png)
+  ![Step 3](Demo%20Step/Step3.png)
 
    - **Step 4: Use Napari viewer to visualize all intermediate steps and generate quantitative plots before saving in the directory**
-  ![Step 4](/Demo%20Step/Step4.png)
+  ![Step 4](Demo%20Step/Step4.png)
 
 
 ## ❓ Troubleshooting
