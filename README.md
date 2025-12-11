@@ -69,6 +69,10 @@ conda activate er_analysis
 
 ---
 
+## System Requirement
+
+The scripts were tested with Python 3.11 on Mac OS Sequoia Version 15.4.1
+
 ## 🚀 Quick start (GUI file selection)
 
 1. **Open this folder** in **Visual Studio Code** or **PyCharm**.
