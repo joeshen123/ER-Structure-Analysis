@@ -42,15 +42,15 @@ This program processes **3D fluorescence microscopy** datasets of the ER and pro
 | `Image_Import.py`                         | Import raw `.nd2` movies and export them as a consolidated `.hdf5` file containing NumPy arrays.                                                   |
 | `ER_Analysis_Module.py`                   | Provide reusable functions for data I/O, preprocessing, segmentation, and feature extraction.                                                      |
 | `ER_Analysis_Program.py`                  | Load `.hdf5` data, run segmentation and metric calculations using the analysis module, and save the results.                                       |
-| `Segmentation_result_visualization_ER.py` | Present segmentation alongside intermediate results and raw data in the Napari viewer, enabling users to compare and assess segmentation accuracy. |
-| `aicssegmentation/` *(optional)*          | Contain accessory functions that support the main program.                                                                                         |
+| `Segmentation_result_visualization_ER.py` **(optional)**  | Present segmentation alongside intermediate results and raw data in the Napari viewer, enabling users to compare and assess segmentation accuracy. |
+| `aicssegmentation `        | Contain accessory functions that support the main program.                                                                                         |
 
 
 ---
 
 ## ⚙ Installation
 
-Use **micromamba** (recommended) or **conda**. We have provided an environmenmt.yaml file that contains all the packages (with specific versions) for the analysis pipeline.
+Use **micromamba** (recommended) or **conda**.  We have provided an environmenmt.yaml file that contains the installation instructions of all the packages (with specific versions) for the analysis pipeline.
 
 ```bash
 # Micromamba
@@ -87,6 +87,7 @@ The scripts were tested with Python 3.11 on Mac OS Sequoia Version 15.4.1
 
 4. *(Optional)* **Run Segmentation_result_visualization_ER.py**`` to inspect segmentation overlays and examine its accuracy.
 
+**Note: All the programs should be run in the virtual envrionment where the packages are installed (Details about creating the envrionment, installing packages and activating the environment before running the program can be found in the Installation step in the Readme).**
 
 ---
 
@@ -101,7 +102,7 @@ The scripts were tested with Python 3.11 on Mac OS Sequoia Version 15.4.1
 ## 🧪 Reproducibility
 
 - The **.hdf5** exported by `Image_Import.py` is the canonical intermediate consumed by the analysis program.
-- Keep acquisition metadata (pixel size, z‑step, channels, exposure) with each dataset.
+- Keep acquisition metadata (pixel size, z‑step, intervals, channels, exposure) with each dataset.
 - Pin versions in `environment.yaml` (consider `conda env export --from-history`).
 
 ---
