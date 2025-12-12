@@ -85,7 +85,7 @@ The scripts were tested with Python 3.11 on Mac OS Sequoia Version 15.4.1
    – **Measurement results** (`.csv`)\
    – **Quick plot** of ER perimeter, area, and circularity per FOV over time (`.png`)
 
-4. *(Optional)* **Run Segmentation_result_visualization_ER.py**`` to inspect segmentation overlays and examine its accuracy.
+4. **(Optional) Run Segmentation_result_visualization_ER.py** to inspect segmentation overlays and examine its accuracy.
 
 **Note: All the programs should be run in the virtual envrionment where the packages are installed (Details about creating the envrionment, installing packages and activating the environment before running the program can be found in the Installation step in the Readme).**
 
